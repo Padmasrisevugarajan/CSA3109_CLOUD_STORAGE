@@ -1,0 +1,11 @@
+public class DriveService {
+ private GoogleApiClient googleApiClient;
+ public DriveService(Context context) {
+ googleApiClient = new GoogleApiClient.Builder(context)
+ .addApi(Drive.API)
+ .addScope(Drive.SCOPE_FILE)
+ .build();}
+ public void uploadFile(File file) {
+ }
+ public void downloadFile(String fileId) {
+ }}

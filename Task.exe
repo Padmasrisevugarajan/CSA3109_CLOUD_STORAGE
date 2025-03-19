@@ -1,0 +1,14 @@
+public class Task {
+ private int id;
+ private String title;
+ private String description;
+ private Date deadline;
+ private boolean isCompleted;
+ public Task(int id, String title, String description, Date deadline, boolean isCompleted) {
+ this.id = id;
+ this.title = title;
+ this.description = description;
+ this.deadline = deadline;
+ this.isCompleted = isCompleted;
+ }
+}

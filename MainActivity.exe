@@ -1,0 +1,18 @@
+public class MainActivity extends AppCompatActivity {
+ private TaskDAO taskDAO;
+ private ListView taskList;
+ @Override
+ protected void onCreate(Bundle savedInstanceState) {
+ super.onCreate(savedInstanceState);
+ setContentView(R.layout.activity_main);
+ taskDAO = new TaskDAO(this);
+ taskList = findViewById(R.id.task_list);
+ findViewById(R.id.add_task_button).setOnClickListener(new View.OnClickListener()
+ { @Override
+ public void onClick(View v) {
+ Task newTask = new Task(0, title, description, deadline, false);
+ taskDAO.addTask(newTask);
+ updateTaskList(); // Method to refresh the displayed task list
+ }});}
+ private void updateTaskList() {
+ List<Task> tasks = taskDAO.getTasks(); }}
